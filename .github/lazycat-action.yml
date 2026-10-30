@@ -21,7 +21,7 @@ images:
     source: docker.io/germannewsmaker/myspeed
     channel: stable
     sort: semver
-    tag_regex: ^v[0-9]+[.][0-9]+[.][0-9]+$
+    tag_regex: ^v?[0-9]+[.][0-9]+[.][0-9]+$
     delivery:
       mode: mirror
       require_digest_match: true
