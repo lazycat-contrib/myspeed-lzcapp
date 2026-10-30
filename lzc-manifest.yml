@@ -6,8 +6,8 @@ application:
       backend: http://myspeed:5216/
 services:
   myspeed:
-    # upstream: ghcr.io/gnmyt/myspeed:1.0.9
-    image: ghcr.1ms.run/gnmyt/myspeed:1.0.9
+    # upstream: docker.io/germannewsmaker/myspeed:1.0.9
+    image: docker.1ms.run/germannewsmaker/myspeed:1.0.9
     environment:
       - TZ=Asia/Shanghai
     binds:

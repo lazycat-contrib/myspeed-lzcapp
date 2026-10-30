@@ -18,7 +18,7 @@ images:
   - id: myspeed
     target: service
     service: myspeed
-    source: ghcr.io/gnmyt/myspeed
+    source: docker.io/germannewsmaker/myspeed
     channel: stable
     sort: semver
     tag_regex: ^v[0-9]+[.][0-9]+[.][0-9]+$
