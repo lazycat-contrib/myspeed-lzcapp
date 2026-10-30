@@ -1,0 +1,21 @@
+application:
+  subdomain: myspeed
+  multi_instance: false
+  upstreams:
+    - location: /
+      backend: http://myspeed:5216/
+services:
+  myspeed:
+    # upstream: ghcr.io/gnmyt/myspeed:1.0.9
+    image: ghcr.1ms.run/gnmyt/myspeed:1.0.9
+    environment:
+      - TZ=Asia/Shanghai
+    binds:
+      - /lzcapp/var/data:/myspeed/data
+usage: |
+  MySpeed 测速记录面板。历史数据库与配置保存在 /lzcapp/var/data，默认保留 30 天。
+  应用本身没有账号体系，入口依赖懒猫登录保护；本包不额外暴露公开路径。
+  测速依赖容器出网能力，结果反映的是本应用所在环境的出口带宽，不代表其他设备。
+  首次启动会自动建库，不需要预置账号或密钥；不需要挂载 Docker socket 或宿主机目录。
+  不加文件选择器拦截，也不添加 smoke 作业或容器运行测试门禁。
+  尚未验证懒猫实机启动、真实测速、定时任务调度或历史图表展示。

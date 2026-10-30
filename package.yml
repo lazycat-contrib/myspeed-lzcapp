@@ -1,0 +1,18 @@
+package: community.lazycat.app.myspeed
+version: 1.0.9
+name: MySpeed
+description: An internet speed test tracker that keeps up to 30 days of results.
+min_os_version: "1.5.0"
+homepage: https://github.com/gnmyt/myspeed
+author: gnmyt
+license: MIT
+permissions:
+  required:
+    - net.internet
+locales:
+  zh:
+    name: MySpeed
+    description: 互联网测速记录工具，保留最多 30 天的测速历史。
+  en:
+    name: MySpeed
+    description: An internet speed test tracker that keeps up to 30 days of results.
