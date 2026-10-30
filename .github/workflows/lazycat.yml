@@ -11,4 +11,3 @@ jobs:
       operation: auto
       config: .github/lazycat-action.yml
       versioned-release-asset: true
-      release-target-commitish: main
